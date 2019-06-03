@@ -1,0 +1,501 @@
+﻿{
+  "name": "My Tasks-from-service.AAADEVAmericasBPS",
+  "categories":
+[
+  {
+        "name": "AmericasBPS",
+        "mTypes": 
+         [
+            {
+                "name": "Consulta Afiliado",
+                "snapinVersion": "3.0",
+		"displayName": "Afiliado",
+                "tag": "AmericasBPS",
+                "svg": "hello",
+                "helpUrl": "hello.html",
+                "tile": "gold",
+                "serviceName": "CollabDesigner",
+                "custom": "true",
+                "nodeType": "activity",
+                "modelClass": "service.AAADEVAmericasBPS.ConsultaAfiliado.ConsultaAfiliadoModel",
+                "executionClass": "service.AAADEVAmericasBPS.ConsultaAfiliado.ConsultaAfiliadoExecution",
+		"mapping": "[\"input\", \"output\"]",
+                "properties": [
+                    {   "name": "tipoDocumento",
+                        "displayPropName": "Tipo de Documento",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "tipoDocumento",
+                        "modelName": "setTipoDocumento"
+                    },
+                    {   "name": "numeroDocumento",
+                        "displayPropName": "Numero de Documento",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "numeroDocumento",
+                        "modelName": "setNumeroDocumento"
+                    },
+                    {   "name": "idLlamada",
+                        "displayPropName": "Id de Llamada",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "idLlamada",
+                        "modelName": "setIdLlamada"
+                    },
+                    {   "name": "idCampanaTitan",
+                        "displayPropName": "Id Campana Titan",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "idCampanaTitan",
+                        "modelName": "setIdCampanaTitan"
+                    }
+                ],
+	        "input_schema": "{
+			        title: InputSchema,
+			        type: object,
+			        properties: {
+			            tipoDocumento: {
+			                type: string
+                        },
+                        numeroDocumento: {
+                            type: string
+                        },
+                        idLlamada: {
+                            type: string
+                        },
+                        idCampanaTitan: {
+                            type: string
+                        }
+			        }
+	        }",
+                "output_schema": "{
+                        title: OutputSchema,
+                        type: object,
+                        properties: {
+                            codigoRTA: {
+                                type: string
+                            },
+                            mensajeRTA: {
+                                type: string
+                            },
+                            idAfiliado: {
+                                type: string
+                            },
+                            idTitan: {
+                                type: string
+                            },
+                            nombreAfiliado: {
+                                type: string
+                            },
+                            ciudadAfiliado: {
+                                type: string
+                            },
+                            codigoCiudadAfiliado: {
+                                type: string
+                            },
+                            edad: {
+                                type: string
+                            },
+                            email: {
+                                type: string
+                            },
+                            celular: {
+                                type: string
+                            },
+                            codigoIPSPrimaria: {
+                                type: string
+                            },
+                            nombreIPSPrimaria: {
+                                type: string
+                            },
+                            idServicio: {
+                                type: string
+                            },
+                            servicioActivo: {
+                                type: string
+                            },
+                            idEstadoServicio: {
+                                type: string
+                            },
+                            codigoIPSOdontologia: {
+                                type: string
+                            },
+                            nombreIPSOdontologia: {
+                                type: string
+                            },
+                            usuarioActivo: {
+                                type: string
+                            },
+                            usuarioTieneEdad: {
+                                type: string
+                            },
+                            usuarioPOS: {
+                                type: string
+                            },
+                            derechoOdontologiaPrimeraVez: {
+                                type: string
+                            },
+                            usuarioVirreySolis: {
+                                type: string
+                            },
+                            tiempoRespuesta: {
+                                type: string
+                            },
+                            idTipoIdentificacion: {
+                                type: string
+                            }
+                        }
+                }"
+            },{
+                "name": "Consulta Citas Disponibles",
+                "snapinVersion": "3.0",
+		"displayName": "Citas Disponibles",
+                "tag": "AmericasBPSDisponibles",
+                "svg": "hello",
+                "helpUrl": "hello.html",
+                "tile": "gold",
+                "serviceName": "CollabDesigner",
+                "custom": "true",
+                "nodeType": "activity",
+                "modelClass": "service.AAADEVAmericasBPS.ConsultaCitasDisponibles.ConsultaCitasDisponiblesModel",
+                "executionClass": "service.AAADEVAmericasBPS.ConsultaCitasDisponibles.ConsultaCitasDisponiblesExcecution",
+		"mapping": "[\"input\", \"output\"]",
+                "properties": [
+                    {   "name": "idPaciente",
+                        "displayPropName": "Id Paciente",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "idPaciente",
+                        "modelName": "setIdPaciente"
+                    },
+                    {   "name": "idEspecialidad",
+                        "displayPropName": "Id Especialidad",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "idEspecialidad",
+                        "modelName": "setIdEspecialidad"
+                    },
+                    {   "name": "planSalud",
+                        "displayPropName": "Plan Salud",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "planSalud",
+                        "modelName": "setPlanSalud"
+                    },
+                    {   "name": "nombreUsuario",
+                        "displayPropName": "Nombre Usuario",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "nombreUsuario",
+                        "modelName": "setNombreUsuario"
+                    },
+                    {   "name": "ciudadResidencia",
+                        "displayPropName": "Ciudad Residencia",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "ciudadResidencia",
+                        "modelName": "setCiudadResidencia"
+                    },
+                    {   "name": "codigoIPS",
+                        "displayPropName": "Codigo IPS",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "codigoIPS",
+                        "modelName": "setCodigoIPS"
+                    },
+                    {   "name": "tipoConsulta",
+                        "displayPropName": "Tipo Consulta",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "tipoConsulta",
+                        "modelName": "setTipoConsulta"
+                    },
+                    {   "name": "idLlamada",
+                        "displayPropName": "Id Llamada",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "idLlamada",
+                        "modelName": "setIdLlamada"
+                    }
+                ],
+	        "input_schema": "{
+			        title: InputSchema,
+			        type: object,
+			        properties: {
+			            idPaciente: {
+			                type: string
+                        },
+                        idEspecialidad: {
+                            type: string
+                        },
+                        planSalud: {
+                            type: string
+                        },
+                        nombreUsuario: {
+                            type: string
+                        },
+                        ciudadResidencia: {
+                            type: string
+                        },
+                        codigoIPS: {
+                            type: string
+                        },
+                        tipoConsulta: {
+                            type: string
+                        },
+                        idLlamada: {
+                            type: string
+                        }
+			        }
+	        }",
+                "output_schema": "{  
+                    title:output_schema,
+                    type:object,
+                    properties:{  
+                       codigoRTA:{  
+                          type:string
+                       },
+                       mensajeRTA:{  
+                          type:string
+                       },
+                       numeroCitas:{  
+                          type:string
+                       },
+                       citasDisponibles:{  
+                          type:object,
+                          properties:{  
+                             idCita:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             },
+                             especialidadCita:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             },
+                             diaCita:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             },
+                             fechaCita:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             },
+                             horaCita:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             },
+                             unidadCita:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             },
+                             medicoCita:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             },
+                             codigoIPS:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             },
+                             subCodigoIPS:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             },
+                             Direccion:{  
+                                type:array,
+                                items:{  
+                                   type:string
+                                }
+                             }
+                          }
+                       }
+                    }
+                 }"
+            },{
+                "name": "Asignacion Citas",
+                "snapinVersion": "3.0",
+		"displayName": "Asignacion Citas",
+                "tag": "AsignacionCitas",
+                "svg": "hello",
+                "helpUrl": "hello.html",
+                "tile": "gold",
+                "serviceName": "CollabDesigner",
+                "custom": "true",
+                "nodeType": "activity",
+                "modelClass": "service.AAADEVAmericasBPS.AsignacionCitas.AsignacionCitasModel",
+                "executionClass": "service.AAADEVAmericasBPS.AsignacionCitas.AsignacionCitasExecution",
+		        "mapping": "[\"input\", \"output\"]",
+                "properties": [
+                    {   "name": "idCita",
+                        "displayPropName": "Id Cita",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "idCita",
+                        "modelName": "setIdCita"
+                    },
+                    {   "name": "idEspecialidad",
+                        "displayPropName": "Id Especialidad",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "idEspecialidad",
+                        "modelName": "setIdEspecialidad"
+                    },
+                    {   "name": "numeroIdentificacion",
+                        "displayPropName": "Numero de Identificacion",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "numeroIdentificacion",
+                        "modelName": "setNumeroIdentificacion"
+                    },
+                    {   "name": "idAfiliado",
+                        "displayPropName": "Id Afiliado",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "idAfiliado",
+                        "modelName": "setIdAfiliado"
+                    },
+                    {   "name": "ciudadResidencia",
+                        "displayPropName": "Ciudad Residencia",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "ciudadResidencia",
+                        "modelName": "setCiudadResidencia"
+                    },
+                    {   "name": "estadoAfiliado",
+                        "displayPropName": "Estado Afiliado",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "estadoAfiliado",
+                        "modelName": "setEstadoAfiliado"
+                    },
+                    {   "name": "tieneCita",
+                        "displayPropName": "Tiene Cita",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "tieneCita",
+                        "modelName": "setTieneCita"
+                    },
+                    {   "name": "codigoIPS",
+                        "displayPropName": "Codigo IPS",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "codigoIPS",
+                        "modelName": "setCodigoIPS"
+                    },
+                    {   "name": "subCodigoIPS",
+                        "displayPropName": "SubCodigo IPS",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "subCodigoIPS",
+                        "modelName": "setSubCodigoIPS"
+                    },
+                    {   "name": "planSalud",
+                        "displayPropName": "Plan Salud",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "planSalud",
+                        "modelName": "setPlanSalud"
+                    },
+                    {   "name": "citaDirecta",
+                        "displayPropName": "Cita Directa",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "citaDirecta",
+                        "modelName": "setCitaDirecta"
+                    },
+                    {   "name": "idLlamada",
+                        "displayPropName": "Id Llamada",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "idLlamada",
+                        "modelName": "setIdLlamada"
+                    }
+                ],
+	        "input_schema": "{
+			        title: InputSchema,
+			        type: object,
+			        properties: {
+			            idCita: {
+			                type: string
+                        },
+                        idEspecialidad: {
+                            type: string
+                        },
+                        numeroIdentificacion: {
+                            type: string
+                        },
+                        idAfiliado: {
+                            type: string
+                        },
+                        ciudadResidencia: {
+                            type: string
+                        },
+                        estadoAfiliado: {
+                            type: string
+                        },
+                        tieneCita: {
+                            type: string
+                        },
+                        codigoIPS: {
+                            type: string
+                        },
+                        subCodigoIPS: {
+                            type: string
+                        },
+                        planSalud: {
+                            type: string
+                        },
+                        citaDirecta: {
+                            type: string
+                        },
+                        idLlamada: {
+                            type: string
+                        }
+			        }
+	        }",
+                "output_schema": "{
+                    title: OutputSchema,
+                    type: object,
+                    properties: {
+                        codigoRTA: {
+                            type: string
+                        },
+                        mensajeRTA: {
+                            type: string
+                        },
+                        idCitaAsignada: {
+                            type: string
+                        },
+                        Nap: {
+                            type: string
+                        },
+                        CuotaModeradora: {
+                            type: string
+                        },
+                        Texto: {
+                            type: string
+                        }
+                    }
+                }"
+            }
+        ]
+  }
+]
+}
